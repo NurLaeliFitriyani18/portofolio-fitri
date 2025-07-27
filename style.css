@@ -6,14 +6,13 @@
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background: url("assets/bg.jpg") no-repeat center center fixed;
+  background: url("assets/logo1.png") no-repeat center center fixed;
   background-size: cover;
   color: white;
   overflow-x: hidden;
   position: relative;
 }
 
-/* Lapisan gelap di atas background agar teks tetap terbaca */
 body::before {
   content: "";
   position: fixed;
@@ -49,7 +48,6 @@ header {
   justify-content: center;
 }
 
-/* Foto profil besar dan responsif */
 .photo-container {
   width: 100%;
   max-width: 380px;
@@ -79,7 +77,7 @@ header {
 }
 
 h1 {
-  font-size: 36px;
+  font-size: 48px;
   font-weight: bold;
 }
 h1 span {
@@ -107,7 +105,6 @@ h2 {
   line-height: 1.5;
 }
 
-/* === Kontak IG, Email, LinkedIn === */
 .contact-section {
   margin-top: 24px;
   display: flex;
@@ -138,12 +135,12 @@ h2 {
   filter: drop-shadow(0 0 10px #38b6ff);
 }
 
-/* === Navigasi Bawah === */
 .bottom-bar {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+  background-color: #0c1a2c;
   display: flex;
   justify-content: space-around;
   padding: 14px 0;
@@ -181,7 +178,6 @@ h2 {
   text-shadow: none;
 }
 
-/* === Animasi Masuk === */
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-out forwards;
@@ -190,8 +186,6 @@ h2 {
 .fade-in-delay {
   opacity: 0;
   animation: fadeIn 1s ease-out 0.5s forwards;
-  padding-top: 70px;
-  padding-left: 100px;
 }
 
 .fade-in-delay2 {
@@ -209,27 +203,65 @@ h2 {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* === Responsif Mobile === */
-@media (max-width: 600px) {
-  h1 { font-size: 32px; }
-  h2 { font-size: 20px; }
+#typing {
+  color: #38b6ff;
+  font-weight: bold;
+}
+
+/* ===== Responsif Tambahan untuk Mobile & Tablet ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .left, .right {
+    max-width: 100%;
+    flex: 1 1 100%;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  .desc {
+    font-size: 14px;
+  }
+
   .photo-container {
-    padding: 10px;
-    max-width: 260px;
+    padding: 12px;
+    max-width: 240px;
   }
+
+  .bottom-bar {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
   .bottom-bar .icon-btn img {
-    width: 180px;
-    height: 100px;
+    width: 90px;
+    height: auto;
+    margin-bottom: 4px;
   }
+
   .bottom-bar .icon-btn span {
     font-size: 12px;
   }
-  .contact-item img {
-    width: 45px;
-    height: 28px;
-  }
+
   .contact-item a {
     font-size: 14px;
   }
-}
 
+  .contact-item img {
+    width: 36px;
+    height: auto;
+  }
+}
