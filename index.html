@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portofolio Fitri</title>
+  <link rel="icon" href="assets/logo1.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+  <main class="hero fade-in">
+    <div class="left fade-in-delay">
+      <p class="label">NUR LAELI FITRIYANI</p>
+      <h1>Nur Laeli Fitriyani</h1>
+      <h2>Hallo, Saya Seorang <span id="typing"></span><span class="cursor">|</span></h2>
+      <p class="desc">
+        Melalui laman ini, saya ingin membagikan proses kreatif, pencapaian, serta berbagai pengalaman yang telah membentuk saya, baik di bidang arsitektur maupun desain visual. Setiap karya dan aktivitas yang saya tuangkan di sini adalah hasil dari semangat belajar, kolaborasi, dan keinginan untuk terus berkembang.
+      </p>
+
+      <!-- Ikon kontak 3 baris -->
+      <div class="contact-section fade-in-delay3">
+        <div class="contact-item">
+          <a href="https://www.instagram.com/n.laelyftr/" target="_blank">
+            <img src="assets/icons/ig.png" alt="Instagram" />
+            <span>Instagram</span>
+          </a>
+        </div>
+        <div class="contact-item">
+          <a href="https://www.linkedin.com/in/nur-laeli-fitriyani-664486238/" target="_blank">
+            <img src="assets/icons/linkedin.png" alt="LinkedIn" />
+            <span>Linkedin</span>
+          </a>
+        </div>
+        <div class="contact-item">
+          <a href="https://mail.google.com/mail/?view=cm&to=nlfitrii18@gmail.com" target="_blank">
+            <img src="assets/icons/gmail.png" alt="Email" />
+            <span>Email</span>
+          </a>
+        </div>
+      </div>
+    </div>
+ 
+  </main>
+
+  <!-- Pemutar Musik -->
+ 
+
+  <!-- Bar Navigasi Bawah -->
+  <div class="bottom-bar fade-in-delay3">
+    <a href="https://hanita-twibbon.my.canva.site/nlftr-tentang-saya" class="icon-btn"><img src="assets/icons/ttg.png" /></a>
+    <a href="#" class="icon-btn"><img src="assets/icons/hasil.png" /></a>
+    <a href="https://hanita-twibbon.my.canva.site/nlftr-publikasi" class="icon-btn"><img src="assets/icons/publikasi.png" /></a>
+    <a href="https://hanita-twibbon.my.canva.site/nlftr-sertifikasi-dan-prestasi" class="icon-btn"><img src="assets/icons/sertif.png" /></a>
+    <a href="https://hanita-twibbon.my.canva.site/nlftr-pengalaman-organisasi" class="icon-btn"><img src="assets/icons/org.png" /></a>
+    <a href="https://hanita-twibbon.my.canva.site/nlftr-pengalaman-magang" class="icon-btn"><img src="assets/icons/magang.png" /></a>
+    <a href="#" class="icon-btn" target="_blank"><img src="assets/icons/kerja.png" /></a>
+  </div>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+    music.volume = 0.3;
+    music.play().catch(() => {
+      document.body.addEventListener("click", () => music.play(), { once: true });
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

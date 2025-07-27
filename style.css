@@ -1,0 +1,235 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url("assets/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Lapisan gelap di atas background agar teks tetap terbaca */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+header {
+  padding: 20px 40px;
+}
+.logo {
+  height: 40px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  flex: 1;
+  max-width: 600px;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Foto profil besar dan responsif */
+.photo-container {
+  width: 100%;
+  max-width: 380px;
+  padding: 20px;
+  background: radial-gradient(circle at center, #17314a 40%, transparent 70%);
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.photo-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.label {
+  color: #38b6ff;
+  letter-spacing: 2px;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+h1 span {
+  color: #38b6ff;
+}
+h2 {
+  font-size: 28px;
+  color: #38b6ff;
+  margin-top: 10px;
+}
+
+.cursor {
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.desc {
+  margin: 20px 0;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+/* === Kontak IG, Email, LinkedIn === */
+.contact-section {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contact-item a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: transform 0.3s ease;
+}
+
+.contact-item img {
+  width: 50px;
+  height: 32px;
+  filter: drop-shadow(0 0 6px #38b6ff);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.contact-item a:hover img {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px #38b6ff);
+}
+
+/* === Navigasi Bawah === */
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 14px 0;
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0, 255, 255, 0.2);
+}
+
+.bottom-bar .icon-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 14px;
+  flex-shrink: 0;
+  transition: 0.3s;
+  padding: 4px;
+}
+
+.bottom-bar .icon-btn img {
+  width: 180px;
+  height: 100px;
+  margin-bottom: 6px;
+  filter: drop-shadow(0 0 6px #38b6ff);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.bottom-bar .icon-btn:hover img {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 12px #38b6ff);
+}
+
+.bottom-bar .icon-btn span {
+  color: white;
+  text-shadow: none;
+}
+
+/* === Animasi Masuk === */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.fade-in-delay {
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.5s forwards;
+  padding-top: 70px;
+  padding-left: 100px;
+}
+
+.fade-in-delay2 {
+  opacity: 0;
+  animation: fadeIn 1s ease-out 0.8s forwards;
+}
+
+.fade-in-delay3 {
+  opacity: 0;
+  animation: fadeIn 1s ease-out 1.2s forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* === Responsif Mobile === */
+@media (max-width: 600px) {
+  h1 { font-size: 32px; }
+  h2 { font-size: 20px; }
+  .photo-container {
+    padding: 10px;
+    max-width: 260px;
+  }
+  .bottom-bar .icon-btn img {
+    width: 180px;
+    height: 100px;
+  }
+  .bottom-bar .icon-btn span {
+    font-size: 12px;
+  }
+  .contact-item img {
+    width: 45px;
+    height: 28px;
+  }
+  .contact-item a {
+    font-size: 14px;
+  }
+}
+
